@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moe Kyaw Aung - Full Stack Developer | Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Three.js for 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div id="three-container"></div>
+    <div class="gradient-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-animated">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand fw-bold text-glow" href="#home">
+                <i class="fas fa-code"></i> moe<span class="text-gradient">kyawaung</span>-cloud
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-animated" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-vh-100 d-flex align-items-center justify-content-center overflow-hidden">
+        <div class="container-fluid">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                    <div class="floating-card">
+                        <div class="profile-wrapper">
+                            <img src="https://en.wikipedia.org/wiki/User:Mg_Moe_Kyaw_Aung?wprov=sfla1" 
+                                 alt="Moe Kyaw Aung" 
+                                 class="profile-image img-fluid rounded-circle border-glow">
+                            <div class="orbit"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-light">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-3 text-glow animate-fade-in-up">
+                            <span class="text-gradient">Moe Kyaw Aung</span>
+                        </h1>
+                        <p class="lead fs-4 mb-4 animate-fade-in-up" style="animation-delay: 0.2s;">
+                            Full Stack Developer <span class="text-gradient">|</span> Cloud Architect <span class="text-gradient">|</span> Tech Innovator
+                        </p>
+                        <p class="fs-5 text-muted mb-4 animate-fade-in-up" style="animation-delay: 0.4s;">
+                            Crafting elegant solutions to complex problems. Passionate about building scalable applications and exploring cutting-edge technologies.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap animate-fade-in-up" style="animation-delay: 0.6s;">
+                            <a href="#contact" class="btn btn-gradient btn-lg btn-hover-scale">
+                                <i class="fas fa-envelope"></i> Get in Touch
+                            </a>
+                            <a href="#portfolio" class="btn btn-outline-light btn-lg btn-hover-scale">
+                                <i class="fas fa-briefcase"></i> View Work
+                            </a>
+                        </div>
+                        <div class="social-icons mt-5 gap-4">
+                            <a href="https://github.com/moekyawaung-cloud" class="social-icon" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 position-relative z-1">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="about-image-wrapper">
+                        <div class="about-image-box">
+                            <img src="https://via.placeholder.com/400x500?text=About+Me" 
+                                 alt="About" 
+                                 class="img-fluid rounded-3xl shadow-lg">
+                            <div class="image-decoration"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="section-title mb-4">
+                        <span class="text-gradient">About</span> Me
+                    </h2>
+                    <p class="fs-5 text-muted mb-3">
+                        Welcome to my digital space! I'm <strong class="text-light">Moe Kyaw Aung</strong>, a passionate full-stack developer with 
+                        a knack for creating innovative digital solutions.
+                    </p>
+                    <p class="fs-5 text-muted mb-3">
+                        With expertise spanning from frontend frameworks to backend architecture, I specialize in building 
+                        robust, scalable applications that not only meet but exceed expectations. My journey in tech has been 
+                        fueled by curiosity, continuous learning, and a commitment to excellence.
+                    </p>
+                    <p class="fs-5 text-muted mb-4">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
+                        or sharing knowledge with the developer community.
+                    </p>
+                    <div class="d-flex gap-4">
+                        <div class="stat-box">
+                            <h3 class="text-gradient">5+</h3>
+                            <p class="text-muted">Years Experience</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 class="text-gradient">50+</h3>
+                            <p class="text-muted">Projects Done</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3 class="text-gradient">30+</h3>
+                            <p class="text-muted">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 position-relative z-1 bg-gradient-section">
+        <div class="container-fluid px-lg-5">
+            <h2 class="section-title text-center mb-5">
+                <span class="text-gradient">Technical</span> Skills
+            </h2>
+
+            <div class="row">
+                <!-- Frontend -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="skill-card card-hover">
+                        <div class="skill-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4 class="text-gradient">Frontend</h4>
+                        <ul class="list-unstyled skill-list">
+                            <li><span class="badge-gradient">React</span></li>
+                            <li><span class="badge-gradient">Next.js</span></li>
+                            <li><span class="badge-gradient">Angular</span></li>
+                            <li><span class="badge-gradient">TailwindCSS</span></li>
+                            <li><span class="badge-gradient">Bootstrap</span></li>
+                            <li><span class="badge-gradient">Gatsby</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="skill-card card-hover">
+                        <div class="skill-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4 class="text-gradient">Backend</h4>
+                        <ul class="list-unstyled skill-list">
+                            <li><span class="badge-gradient">Ruby/Sinatra</span></li>
+                            <li><span class="badge-gradient">Kotlin/Ktor</span></li>
+                            <li><span class="badge-gradient">Node.js</span></li>
+                            <li><span class="badge-gradient">REST API</span></li>
+                            <li><span class="badge-gradient">GraphQL</span></li>
+                            <li><span class="badge-gradient">PostgreSQL</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="skill-card card-hover">
+                        <div class="skill-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4 class="text-gradient">Mobile</h4>
+                        <ul class="list-unstyled skill-list">
+                            <li><span class="badge-gradient">Flutter</span></li>
+                            <li><span class="badge-gradient">Flutter Web</span></li>
+                            <li><span class="badge-gradient">React Native</span></li>
+                            <li><span class="badge-gradient">Dart</span></li>
+                            <li><span class="badge-gradient">Firebase</span></li>
+                            <li><span class="badge-gradient">PWA</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cloud & Tools -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="skill-card card-hover">
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4 class="text-gradient">Cloud & DevOps</h4>
+                        <ul class="list-unstyled skill-list">
+                            <li><span class="badge-gradient">AWS</span></li>
+                            <li><span class="badge-gradient">Docker</span></li>
+                            <li><span class="badge-gradient">GitHub Actions</span></li>
+                            <li><span class="badge-gradient">CI/CD</span></li>
+                            <li><span class="badge-gradient">Linux</span></li>
+                            <li><span class="badge-gradient">Git</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 position-relative z-1">
+        <div class="container-fluid px-lg-5">
+            <h2 class="section-title text-center mb-5">
+                <span class="text-gradient">Featured</span> Projects
+            </h2>
+
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card card-hover">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250?text=React+Dashboard" alt="Project" class="img-fluid">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-sm btn-light">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="text-gradient">React Analytics Dashboard</h5>
+                            <p class="text-muted">Modern dashboard with real-time data visualization and responsive design.</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Recharts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card card-hover">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250?text=Ruby+API" alt="Project" class="img-fluid">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-sm btn-light">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="text-gradient">Ruby REST API Server</h5>
+                            <p class="text-muted">Scalable backend service with JWT authentication and PostgreSQL database.</p>
+                            <div class="project-tags">
+                                <span class="tag">Ruby</span>
+                                <span class="tag">Sinatra</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card card-hover">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250?text=Flutter+Web" alt="Project" class="img-fluid">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-sm btn-light">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="text-gradient">Flutter Web Application</h5>
+                            <p class="text-muted">Cross-platform web app with seamless experience across all devices.</p>
+                            <div class="project-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Dart</span>
+                                <span class="tag">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card card-hover">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250?text=Next.js+Store" alt="Project" class="img-fluid">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-sm btn-light">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="text-gradient">Next.js E-Commerce Store</h5>
+                            <p class="text-muted">Full-stack e-commerce platform with payment integration and admin panel.</p>
+                            <div class="project-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">Stripe</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card card-hover">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250?text=Angular+Admin" alt="Project" class="img-fluid">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-sm btn-light">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="text-gradient">Angular Admin Dashboard</h5>
+                            <p class="text-muted">Enterprise admin panel with complex state management and data tables.</p>
+                            <div class="project-tags">
+                                <span class="tag">Angular</span>
+                                <span class="tag">RxJS</span>
+                                <span class="tag">Material</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card card-hover">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250?text=Kotlin+Ktor" alt="Project" class="img-fluid">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-sm btn-light">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h5 class="text-gradient">Kotlin Ktor Microservice</h5>
+                            <p class="text-muted">High-performance backend service using Kotlin and Ktor framework.</p>
+                            <div class="project-tags">
+                                <span class="tag">Kotlin</span>
+                                <span class="tag">Ktor</span>
+                                <span class="tag">REST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 position-relative z-1 contact-section">
+        <div class="container-fluid px-lg-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-4">
+                        Let's <span class="text-gradient">Connect</span>
+                    </h2>
+                    <p class="fs-5 text-muted mb-5">
+                        Have an exciting project in mind or want to collaborate? I'd love to hear from you!
+                    </p>
+
+                    <div class="contact-methods mb-5">
+                        <div class="row">
+                            <div class="col-md-4 mb-4 mb-md-0">
+                                <div class="contact-box">
+                                    <i class="fas fa-envelope text-gradient"></i>
+                                    <h5 class="mt-3">Email</h5>
+                                    <a href="mailto:moekyawaung@example.com" class="text-muted">moekyawaung@example.com</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mb-md-0">
+                                <div class="contact-box">
+                                    <i class="fas fa-phone text-gradient"></i>
+                                    <h5 class="mt-3">Phone</h5>
+                                    <a href="tel:+95912345678" class="text-muted">+95 (9) 123-456-78</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contact-box">
+                                    <i class="fas fa-map-marker-alt text-gradient"></i>
+                                    <h5 class="mt-3">Location</h5>
+                                    <p class="text-muted">Yangon, Myanmar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="mailto:moekyawaung@example.com" class="btn btn-gradient btn-lg btn-hover-scale">
+                            <i class="fas fa-envelope"></i> Send Email
+                        </a>
+                        <a href="https://github.com/moekyawaung-cloud" class="btn btn-outline-light btn-lg btn-hover-scale">
+                            <i class="fab fa-github"></i> Visit GitHub
+                        </a>
+                    </div>
+
+                    <div class="social-icons mt-5 justify-content-center gap-4">
+                        <a href="https://github.com/moekyawaung-cloud" class="social-icon large" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-icon large" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-icon large" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon large" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-top border-secondary py-4 position-relative z-1">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="text-muted mb-0">
+                        &copy; 2024 <strong class="text-gradient">Moe Kyaw Aung</strong>. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-muted mb-0">
+                        GitHub: <a href="https://github.com/moekyawaung-cloud" class="text-gradient text-decoration-none">moekyawaung-cloud</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
